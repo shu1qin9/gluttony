@@ -1,0 +1,16 @@
+# test.py
+test.py
+
+# venv
+venv/
+
+# log
+log/
+*.log
+
+# 禁止字节码文件
+__pycache__
+
+# 禁用idea库文件
+.idea/
+.DS_Store
