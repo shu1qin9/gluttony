@@ -48,7 +48,6 @@ class Common:
         # 初始化常规漏扫参数
         target_list = []
         scan_exp_path = "exploits"
-        variable.set_arg("default_thread", 30)
         variable.set_arg("default_dnslog", False)
         exp_module_list = get_exploits_list(scan_exp_path)
         if args.thread:

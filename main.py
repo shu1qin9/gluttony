@@ -2,9 +2,9 @@
 import os
 import argparse
 import traceback
-from lib.core.base import variable
-from lib.core.init.console import Console
 from lib.core.init.common import Common
+from lib.core.init.console import Console
+from lib.core.init.configure import frame_init
 
 
 # 获取解析器
@@ -35,10 +35,8 @@ def create_parser():
 
 def main():
     # 初始化信息
+    frame_init()
     console = Console()
-    # 用于初始化全局配置文件
-    variable.init()
-    variable.set_arg("root_path", os.path.abspath("."))
     try:
         common = Common()
         console = Console()
