@@ -1,4 +1,9 @@
 rich
 loguru
+libsast
 requests
 pyfiglet
+aiofiles
+frida-tools
+
+
