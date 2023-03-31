@@ -21,7 +21,7 @@ class refused_service(Exploits):
             "type": "android",
             "name": "android 客户端拒绝服务漏洞",  # 漏洞名称
             "create_time": "2023-03-21",  # 漏洞创建时间
-            "rank": "refused",  # 漏洞效果
+            "rank": "RS",  # 漏洞效果
             "desc": "android 客户端拒绝服务漏洞",  # 漏洞描述
             "attack": False,  # 是否存在exp
             "vulnerable": False  # 是否利用成功

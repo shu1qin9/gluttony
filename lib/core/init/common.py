@@ -4,10 +4,10 @@
 """
 import sys
 from lib.core.base import variable
-from exploits.run import ExploitRun
+from lib.core.init.run import ExploitRun
 from lib.core.init.console import Console
 from lib.core.base.logger import log_handler
-from exploits.init import get_exploits_list, search_exploits
+from lib.core.init.init import get_exploits_list, search_exploits
 
 
 class Common:
