@@ -19,3 +19,11 @@ class SystemException(Exception):
         self.name = name
         self.reason = reason
 
+
+# 代码扫描出错的错误抛出
+class CodeScanException(Exception):
+
+    def __init__(self, name, reason):
+        self.name = name
+        self.reason = reason
+
