@@ -19,12 +19,13 @@ def get_files_path(file_path):
     if os.path.isdir(file_path):
         for check_file in os.listdir(file_path):
             current_path = os.path.join(file_path, check_file)
+            exploits_black_list = config.read_ini("GLUTTONY", "BLACK_LIST", isjson=True).get("exploits")
             # 判断当前绝对路劲是否为python文件
-            if os.path.isfile(current_path) and check_file.split('.')[-1] != 'py':
+            if (os.path.isfile(current_path) and check_file.split('.')[-1] != 'py') or any(
+                    current_path.startswith(path) for path in exploits_black_list):
                 continue
             each_path = get_files_path(current_path)
             # 加载黑名单
-            exploits_black_list = config.read_ini("GLUTTONY", "BLACK_LIST", isjson=True).get("exploits")
             for file in each_path:
                 # 判断文件是否在黑名单，如果存在则不予记录
                 if get_module_name(file) in exploits_black_list:
