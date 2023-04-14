@@ -27,3 +27,11 @@ class CodeScanException(Exception):
         self.name = name
         self.reason = reason
 
+
+# 漏洞扫描出错的错误抛出
+class VulnScanException(Exception):
+
+    def __init__(self, name, reason):
+        self.name = name
+        self.reason = reason
+
